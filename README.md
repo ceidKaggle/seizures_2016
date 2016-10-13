@@ -13,4 +13,5 @@ only the packages that are not already included in the bundle.
 After requirements are install use `python create_dataset.py` to create training dataset and `python train_predict.py` to
 train model.
 
-Tested only with python2.7 but probably compatible with python 3+ as well.
+Tested only with python2.7 but probably compatible with python 3+ as well. (no it's not compatible with python3, so fix it
+if you'd like)
