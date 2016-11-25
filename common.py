@@ -83,7 +83,13 @@ def feature_extraction(counter, stage, _size, file_name):
     """method coordinator of feature extraction. All features get produced
     together to avoid multiples reads of the same file
     """
-    file_path = '{}_{}/{}'.format(stage, file_name[0], file_name)
+    patient_id = None
+    if file_name[0] == 'n':
+        patient_id = file_name[4]
+        file_path = '{}_{}_new/{}'.format(stage, patient_id, file_name)
+    else:
+        patient_id = file_name[0]
+        file_path = '{}_{}/{}'.format(stage, patient_id, file_name)
     try:
         m = loadmat('../' + file_path, verify_compressed_data_integrity=False)
     except Exception as e:
